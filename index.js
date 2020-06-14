@@ -26,7 +26,6 @@ const transactionMiner = new TransactionMiner({blockchain, transactionPool, wall
 
 const DEFAULT_PORT = 3000;
 const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
-const REDIS_URL = isDevelopment?"redis://127.0.0.1:6379":'redis://h:peae343e724f96671e5b84ea967888bfb5e7e98b0969fe2b71a4593a9e31bf1fa@ec2-3-231-32-130.compute-1.amazonaws.com:13239'
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/dist')));
