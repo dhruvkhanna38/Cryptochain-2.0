@@ -13,7 +13,6 @@ const isDevelopment = process.env.ENV === 'development';
 const REDIS_URL = isDevelopment?"redis://127.0.0.1:6379":"redis://h:p28e4bcd4cce8de8c3f89848c70e46d6d1887debec7afe1de9f77c562d398e3f3@ec2-54-205-115-98.compute-1.amazonaws.com:9079";
 
 
-
 const app = express();
 const blockchain = new Blockchain();
 const transactionPool = new TransactionPool();
@@ -27,9 +26,9 @@ const transactionMiner = new TransactionMiner({blockchain, transactionPool, wall
 const DEFAULT_PORT = 3000;
 const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
 
-
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, 'client/dist')));
 
 app.get('/api/blocks', (req, res) => {
