@@ -10,8 +10,7 @@ const TransactionMiner = require("./app/transactionMiner");
 
 
 const isDevelopment = process.env.ENV === 'development';
-const REDIS_URL = isDevelopment?"redis://127.0.0.1:6379":'redis://h:peae343e724f96671e5b84ea967888bfb5e7e98b0969fe2b71a4593a9e31bf1fa@ec2-3-231-32-130.compute-1.amazonaws.com:13239'
-
+const REDIS_URL = isDevelopment?"redis://127.0.0.1:6379":"redis://h:p28e4bcd4cce8de8c3f89848c70e46d6d1887debec7afe1de9f77c562d398e3f3@ec2-54-205-115-98.compute-1.amazonaws.com:9079";
 
 
 
